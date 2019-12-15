@@ -2,6 +2,7 @@ package com.example.project7777;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -12,8 +13,7 @@ import android.widget.EditText;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity
-        {
+public class MainActivity extends AppCompatActivity {
     private EditText tense;
 
     public static ArrayList<VerbRow> verbs;
@@ -31,12 +31,7 @@ public class MainActivity extends AppCompatActivity
 
 // Создаем обьект, и отслеживание нажатий, жестов
 
-        tense =  findViewById(R.id.editTextTime);
-
-
-
-
-
+        tense = findViewById(R.id.editTextTime);
     }
 
     public void nextActivity(View view) {

@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.function.Consumer;
 
 public class Main3Activity extends AppCompatActivity {
-    Context context=this;
+    Context context = this;
 
     String shoresh;
     String time;
