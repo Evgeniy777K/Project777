@@ -31,17 +31,11 @@ public class Main3Activity extends AppCompatActivity {
         shoresh = getIntent().getStringExtra("shoresh");
         time = getIntent().getStringExtra("time");
 
-<<<<<<< Updated upstream
+
         DatabaseAccess databaseAccess = DatabaseAccess.getInstance(this);
         databaseAccess.open();
         verbs = databaseAccess.getVerbs();
         databaseAccess.close();
-=======
-//        DatabaseAccess databaseAccess = DatabaseAccess.getInstance(this);
-//        databaseAccess.open();
-//        verbs = databaseAccess.getVerbs();
-//        databaseAccess.close();
->>>>>>> Stashed changes
 
 
         List<String> results = new ArrayList<>();

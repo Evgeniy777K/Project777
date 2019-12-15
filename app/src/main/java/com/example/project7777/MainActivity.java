@@ -17,6 +17,8 @@ public class MainActivity extends AppCompatActivity
 
     private EditText tense;
 
+    public static List<VerbRow> verbs;
+
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
@@ -26,7 +28,7 @@ public class MainActivity extends AppCompatActivity
 
         DatabaseAccess databaseAccess = DatabaseAccess.getInstance(this);
         databaseAccess.open();
-        List<VerbRow> verbs = databaseAccess.getVerbs();
+        verbs = databaseAccess.getVerbs();
         databaseAccess.close();
 
 // Создаем обьект, и отслеживание нажатий, жестов
