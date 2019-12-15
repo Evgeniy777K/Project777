@@ -31,6 +31,7 @@ public class Main3Activity extends AppCompatActivity {
         shoresh = getIntent().getStringExtra("shoresh");
         time = getIntent().getStringExtra("time");
 
+        verbs = MainActivity.verbs;
 
         List<String> results = new ArrayList<>();
 
