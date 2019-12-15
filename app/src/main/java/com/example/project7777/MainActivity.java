@@ -13,8 +13,6 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity
         {
-    Button btnActTwo;
-
     private EditText tense;
 
     public static List<VerbRow> verbs;
