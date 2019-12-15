@@ -18,11 +18,6 @@ public class VerbRow {
         this.base_form = base_form;
     }
 
-    String getAbc() {
-        return this.base_form.substring(0, 1) +
-                this.base_form.substring(1, 2) +
-                this.base_form.substring(3, 4);
-    }
 
     String getTense() {
         String m = this.morphology;
@@ -107,14 +102,6 @@ public class VerbRow {
     }
 
 
-    public String toString2() {
-        return this.binyan + ", " +
-                this.table_number + ", " +
-                this.vocalized_inflection + ", " +
-                this.morphology + ", " +
-                this.base_form + ", " +
-                this.base_form.length() + "";
-    }
 
     @NonNull
     @Override

@@ -33,6 +33,11 @@ public class MainActivity extends AppCompatActivity
 // Создаем обьект, и отслеживание нажатий, жестов
 
         tense =  findViewById(R.id.editTextTime);
+
+
+
+
+
     }
 
     public void nextActivity(View view) {
