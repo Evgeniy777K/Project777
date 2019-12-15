@@ -30,11 +30,7 @@ public class Main3Activity extends AppCompatActivity {
 
         shoresh = getIntent().getStringExtra("shoresh");
         time = getIntent().getStringExtra("time");
-
-        DatabaseAccess databaseAccess = DatabaseAccess.getInstance(this);
-        databaseAccess.open();
-        verbs = databaseAccess.getVerbs();
-        databaseAccess.close();
+        verbs = MainActivity.verbs;
 
 
         List<String> results = new ArrayList<>();
@@ -42,8 +38,6 @@ public class Main3Activity extends AppCompatActivity {
         for (int i = 0; i < verbs.size(); i++) {
             VerbRow verb = verbs.get(i);
             counter++;
-            // Log.d("rrr_l", verb.toString()+" , "+counter);
-            //   results.add(verb.toString()+" , "+counter);
             if (verb.toString().equals(shoresh) && verb.getTense().equals(time)) {
                 Log.d("rrr_l", verb.getLitso());
                 Log.d("rrr_ch", verb.getChislo());
@@ -62,12 +56,7 @@ public class Main3Activity extends AppCompatActivity {
         listView.setAdapter(adapter);
 
         Log.d("qaz", String.valueOf(results));
-
-        String listString = "";
-        for (String s : results) {
-            listString += s + " ";
-        }
-
+        
         String textToBeTranslated = "אוֹהֵב";
         String languagePair = "he-ru";
         Translate(textToBeTranslated, languagePair);
