@@ -57,8 +57,8 @@ public class DatabaseAccess {
      *
      * @return a List of getVerbs
      */
-    public List<VerbRow> getVerbs() {
-        List<VerbRow> list = new ArrayList<>();
+    public ArrayList<VerbRow> getVerbs() {
+        ArrayList<VerbRow> list = new ArrayList<>();
 
         Cursor cursor = database.rawQuery("SELECT * FROM tbl1",null);
         cursor.moveToFirst();

@@ -19,7 +19,7 @@ public class Main3Activity extends AppCompatActivity {
 
     String shoresh;
     String time;
-    List<VerbRow> verbs;
+    ArrayList<VerbRow> verbs = MainActivity.verbs;
     long counter = 0;
 
     @RequiresApi(api = Build.VERSION_CODES.N)
@@ -30,8 +30,8 @@ public class Main3Activity extends AppCompatActivity {
 
         shoresh = getIntent().getStringExtra("shoresh");
         time = getIntent().getStringExtra("time");
-        verbs = MainActivity.verbs;
 
+        verbs = MainActivity.verbs;
 
         List<String> results = new ArrayList<>();
 
