@@ -43,17 +43,6 @@ public class VerbRow {
         return m.substring(spls + 1, thridpls);
     }
 
-    String getEnd() {
-        String m = this.morphology;
-        int fpls = m.indexOf('+');
-        int spls = m.indexOf("+", fpls + 1);
-        int thridpls = m.indexOf("+", spls + 1);
-        int fourpls = m.indexOf("+", thridpls + 1);
-        int fivepls = m.indexOf("+", fourpls + 1);
-        return m.substring(fourpls + 1, fivepls);
-
-
-    }
 
     String getLitso() {
         String m = this.morphology;
