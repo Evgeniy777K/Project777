@@ -19,7 +19,7 @@ public class Main3Activity extends AppCompatActivity {
 
     String shoresh;
     String time;
-    List<VerbRow> verbs = MainActivity.verbs;
+    ArrayList<VerbRow> verbs = MainActivity.verbs;
     long counter = 0;
 
     @RequiresApi(api = Build.VERSION_CODES.N)
@@ -30,12 +30,6 @@ public class Main3Activity extends AppCompatActivity {
 
         shoresh = getIntent().getStringExtra("shoresh");
         time = getIntent().getStringExtra("time");
-
-
-        DatabaseAccess databaseAccess = DatabaseAccess.getInstance(this);
-        databaseAccess.open();
-        verbs = databaseAccess.getVerbs();
-        databaseAccess.close();
 
 
         List<String> results = new ArrayList<>();

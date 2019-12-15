@@ -9,13 +9,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity
         {
     private EditText tense;
 
-    public static List<VerbRow> verbs;
+    public static ArrayList<VerbRow> verbs;
 
 
     @RequiresApi(api = Build.VERSION_CODES.N)

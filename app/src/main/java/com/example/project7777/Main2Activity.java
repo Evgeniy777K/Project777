@@ -15,13 +15,6 @@ public class Main2Activity extends AppCompatActivity {
     Button button4;
     Button button5;
     Button button6;
-//    Button button7;
-//    Button button8;
-//    Button button9;
-//    Button button10;
-//    Button button11;
-//    Button button12;
-//    Button button13;
 
 
 
@@ -36,14 +29,6 @@ public class Main2Activity extends AppCompatActivity {
         button4 = (Button) findViewById(R.id.button_Imperative);
         button5 = (Button) findViewById(R.id.button_Infinitive);
         button6 = (Button) findViewById(R.id.button_Beinoni);
-//        button7 = (Button) findViewById(R.id.button_Paal);
-//        button8 = (Button) findViewById(R.id.button_Piel);
-//        button9 = (Button) findViewById(R.id.button_Ifil);
-//        button10 = (Button) findViewById(R.id.button_Itpael);
-//        button11 = (Button) findViewById(R.id.button_Nifal);
-//        button12 = (Button) findViewById(R.id.button_Pual);
-//        button13 = (Button) findViewById(R.id.button_Ufal);
-
 
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
