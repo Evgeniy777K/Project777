@@ -1,6 +1,4 @@
 
-
-
 package com.example.project7777;
 
 
@@ -32,7 +30,6 @@ public class TranslatorBackgroundTask extends AsyncTask<String, Void, String> {
 
     @Override
     protected String doInBackground(String... params) {
-        //String variables
         String textToBeTranslated = params[0];
         String languagePair = params[1];
 
@@ -95,5 +92,3 @@ public class TranslatorBackgroundTask extends AsyncTask<String, Void, String> {
         super.onProgressUpdate(values);
     }
 }
-
-

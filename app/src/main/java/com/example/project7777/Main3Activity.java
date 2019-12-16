@@ -12,14 +12,13 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Consumer;
 
 public class Main3Activity extends AppCompatActivity {
     Context context=this;
 
     String shoresh;
     String time;
-    ArrayList<VerbRow> verbs = MainActivity.verbs;
+    ArrayList<VerbRow> verbs ;
     long counter = 0;
 
     @RequiresApi(api = Build.VERSION_CODES.N)
@@ -31,6 +30,8 @@ public class Main3Activity extends AppCompatActivity {
         shoresh = getIntent().getStringExtra("shoresh");
         time = getIntent().getStringExtra("time");
 
+
+        verbs=MainActivity.verbs;
         List<String> results = new ArrayList<>();
 
         for (int i = 0; i < verbs.size(); i++) {
@@ -40,6 +41,7 @@ public class Main3Activity extends AppCompatActivity {
                 Log.d("rrr_l", verb.getLitso());
                 Log.d("rrr_ch", verb.getChislo());
                 results.add(verb.vocalized_inflection + "  " + verb.getMesto());
+                Translate(verb.vocalized_inflection, "he-ru");
             }
         }
 
@@ -60,14 +62,15 @@ public class Main3Activity extends AppCompatActivity {
             listString += s + " ";
         }
 
-        String textToBeTranslated = "אוֹהֵב";
-        String languagePair = "he-ru";
-        Translate(textToBeTranslated, languagePair);
+
+//        String textToBeTranslated = "אוֹהֵב";
+//        String languagePair = "he-ru";
+//        Translate(textToBeTranslated, languagePair);
     }
 
     void Translate(String textToBeTranslated, String languagePair) {
         TranslatorBackgroundTask translatorBackgroundTask = new TranslatorBackgroundTask(context);
-        String translationResult = String.valueOf(translatorBackgroundTask.execute(textToBeTranslated, languagePair)); // Returns the translated text as a String
+        String translationResult = String.valueOf(translatorBackgroundTask.execute(textToBeTranslated, languagePair));// Returns the translated text as a String
         Log.d("Translation Result", translationResult); // Logs the result in Android Monitor
     }
 }
