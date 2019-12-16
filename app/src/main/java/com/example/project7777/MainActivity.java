@@ -3,7 +3,9 @@ package com.example.project7777;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+
 import android.annotation.SuppressLint;
+
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -15,6 +17,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import java.util.ArrayList;
+
 
 
 public class MainActivity extends AppCompatActivity {
@@ -32,11 +35,15 @@ public class MainActivity extends AppCompatActivity {
         }
 
     };
+public class MainActivity extends AppCompatActivity {
+
     private EditText tense;
 
     public static ArrayList<VerbRow> verbs;
 
+
     Button nxtB;
+
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
@@ -55,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
             myHandler.sendEmptyMessage(0);
         }).start();
 // Создаем обьект, и отслеживание нажатий, жестов
+
 
 
         tense = findViewById(R.id.editTextTime);

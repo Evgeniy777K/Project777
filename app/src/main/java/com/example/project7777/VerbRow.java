@@ -18,6 +18,7 @@ public class VerbRow {
         this.base_form = base_form;
     }
 
+
     String getTense() {
         String m = this.morphology;
         int fpls = m.indexOf('+');
@@ -42,17 +43,6 @@ public class VerbRow {
         return m.substring(spls + 1, thridpls);
     }
 
-    String getEnd() {
-        String m = this.morphology;
-        int fpls = m.indexOf('+');
-        int spls = m.indexOf("+", fpls + 1);
-        int thridpls = m.indexOf("+", spls + 1);
-        int fourpls = m.indexOf("+", thridpls + 1);
-        int fivepls = m.indexOf("+", fourpls + 1);
-        return m.substring(fourpls + 1, fivepls);
-
-
-    }
 
     String getLitso() {
         String m = this.morphology;
@@ -100,14 +90,15 @@ public class VerbRow {
         return m;
     }
 
+
     @NonNull
     @Override
     public String toString() {
         if (this.base_form.length() == 3) {
-            return this.base_form.substring(0, 1) + this.base_form.substring(2, 3);
-        } else if (this.base_form.length() == 4) {
-            return this.base_form.substring(0, 1) + this.base_form.substring(3, 4);
-        } else if (this.base_form.length() == 5 && this.binyan.equals("A") || this.base_form.length() == 5 && this.binyan.equals("B")
+            return base_form.substring(0, 1) + base_form.substring(2, 3);
+        } else if (base_form.length() == 4) {
+            return base_form.substring(0, 1) + base_form.substring(3, 4);
+        } else if (this.base_form.length() == 5 && binyan.equals("A") || this.base_form.length() == 5 && this.binyan.equals("B")
                 || this.base_form.length() == 5 && this.binyan.equals("C") || this.base_form.length() == 5 && this.binyan.equals("D")
                 || this.base_form.length() == 5 && this.binyan.equals("F")) {
             return this.base_form.substring(0, 1) + this.base_form.substring(2, 3) + this.base_form.substring(4, 5);

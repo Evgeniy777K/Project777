@@ -59,7 +59,7 @@ public class DatabaseAccess {
     public ArrayList<VerbRow> getVerbs() {
         ArrayList<VerbRow> list = new ArrayList<>();
 
-        Cursor cursor = database.rawQuery("SELECT * FROM tbl1",null);
+        Cursor cursor = database.rawQuery("SELECT * FROM tbl1", null);
         cursor.moveToFirst();
         while (!cursor.isAfterLast()) {
             list.add(
@@ -73,6 +73,29 @@ public class DatabaseAccess {
             cursor.moveToNext();
         }
         cursor.close();
+
+
+        return list;
+    }
+
+    public List<VerbRow> getVerbsByShoresh(String shoresh) {
+        List<VerbRow> list = new ArrayList<>();
+
+        Cursor cursor = database.rawQuery("SELECT * FROM tbl1 WHERE base_form = ?", new String[]{shoresh});
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            list.add(
+                    new VerbRow(cursor.getString(0),
+                            cursor.getString(1),
+                            cursor.getString(2),
+                            cursor.getString(3),
+                            cursor.getString(4)
+                    )
+            );
+            cursor.moveToNext();
+        }
+        cursor.close();
+
         return list;
     }
 }

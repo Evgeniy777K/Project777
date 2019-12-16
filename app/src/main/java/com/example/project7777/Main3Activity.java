@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Main3Activity extends AppCompatActivity {
-    Context context=this;
+    Context context = this;
 
     String shoresh;
     String time;
@@ -66,6 +66,10 @@ public class Main3Activity extends AppCompatActivity {
 //        String textToBeTranslated = "אוֹהֵב";
 //        String languagePair = "he-ru";
 //        Translate(textToBeTranslated, languagePair);
+
+        String textToBeTranslated = "אוֹהֵב";
+        String languagePair = "he-ru";
+        Translate(textToBeTranslated, languagePair);
     }
 
     void Translate(String textToBeTranslated, String languagePair) {
