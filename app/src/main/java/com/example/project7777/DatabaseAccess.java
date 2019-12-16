@@ -5,7 +5,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -74,6 +73,7 @@ public class DatabaseAccess {
             cursor.moveToNext();
         }
         cursor.close();
+
 
         return list;
     }

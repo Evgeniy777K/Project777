@@ -21,7 +21,6 @@ public class Main2Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_two);
-
         button1 = (Button) findViewById(R.id.button_Past_Time);
         button2 = (Button) findViewById(R.id.button_Present_Time);
         button3 = (Button) findViewById(R.id.button_Future_Time);

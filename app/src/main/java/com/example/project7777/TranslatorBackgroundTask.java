@@ -1,6 +1,4 @@
 
-
-
 package com.example.project7777;
 
 
@@ -94,5 +92,3 @@ public class TranslatorBackgroundTask extends AsyncTask<String, Void, String> {
         super.onProgressUpdate(values);
     }
 }
-
-
