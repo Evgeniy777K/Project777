@@ -52,6 +52,8 @@
         android:layout_weight="1"
         android:background="@drawable/button"
         android:clickable="false"
+        android:linksClickable="false"
+        android:longClickable="false"
         android:onClick="nextActivity"
         android:text="wait..."
         android:textColor="@android:color/white" />

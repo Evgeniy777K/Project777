@@ -3,6 +3,7 @@ package com.example.project7777;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         nxtB.setClickable(true);
     }
 
+    @SuppressLint("HandlerLeak")
     final Handler myHandler = new Handler() {
         public void handleMessage(Message s) {
             accessViewFromThread();
